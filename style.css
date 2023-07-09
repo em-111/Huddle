@@ -1,0 +1,605 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@700&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+
+:root {
+    /* Primary */
+    --pink: hsl(322, 100%, 66%);
+    --light-pink: hsl(321, 100%, 78%);
+    --light-red: hsl(0, 100%, 63%);
+
+    /* Neutral */
+    --dark-cyan: hsl(192, 100%, 9%);
+    --light-cyan: hsla(192, 100%, 9%, 0.3);
+    --pale-blue: hsl(207, 100%, 98%);
+    --white: hsl(0, 0%, 100%);
+
+    /* Fonts */
+    --poppins: "Poppins", sans-serif;
+    --open-sans: "Open Sans", sans-serif;
+
+    --width: 87.5rem;
+}
+
+body {
+    font-family: var(--poppins);
+}
+
+h1,
+h2 {
+    font-family: var(--open-sans);
+}
+
+h1 {
+    font-size: clamp(2rem, 1rem + 2vw, 3rem);
+}
+
+h2 {
+    font-size: clamp(1.7rem, 0.8rem + 2vw, 2.2rem);
+}
+
+p {
+    font-size: 0.875rem;
+}
+
+.free--start {
+    width: 14.125rem;
+    height: 3.12rem;
+    font-size: 0.9rem;
+    border-radius: 1.25rem;
+    border: none;
+    outline: none;
+    color: var(--white);
+    background-color: var(--pink);
+    cursor: pointer;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* =============================================    HEADER    ============================================= */
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+header nav {
+    width: var(--width);
+    padding: 2.5rem 1.9rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+header .logo {
+    width: 12.5rem;
+    height: 2.5rem;
+    background-image: url("./Images/logo.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+header button {
+    padding: 0 1.5rem;
+    font-size: 0.9rem;
+    color: var(--pink);
+    background-color: transparent;
+    border: 1px solid var(--pink);
+    outline: none;
+    border-radius: 1.25rem;
+    cursor: pointer;
+}
+
+/* =============================================    MAIN    ============================================= */
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.main {
+    padding: 4.3rem 1.9rem 10.6rem 1.9rem;
+    text-align: center;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 4.3rem;
+    align-items: center;
+    position: relative;
+}
+
+.main .description {
+    max-width: 500px;
+}
+
+.main .mockup--image {
+    width: 80%;
+    aspect-ratio: 1 / 0.5;
+    background-image: url("./Images/screen-mockups.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.main .stats {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+    justify-content: space-between;
+}
+
+.main .stat--logo1,
+.main .stat--logo2 {
+    width: 1.8rem;
+    height: 1.8rem;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.main .stat--logo1 {
+    background-image: url("./Images/icon-communities.svg");
+}
+
+.main .stat--logo2 {
+    background-image: url("./Images/icon-messages.svg");
+}
+
+.main .stats p {
+    font-size: clamp(3rem, 0.5rem + 4vw, 4.5rem);
+}
+
+.main .stats h6 {
+    color: var(--light-cyan);
+}
+
+.top1 {
+    width: 100%;
+    aspect-ratio: 1 / 0.08;
+    background-image: url("./Images/bg-section-top-desktop-1.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+/* =============================================    GROW TOGETHER    ============================================= */
+.grow {
+    background-color: var(--pale-blue);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.grow--together {
+    width: var(--width);
+    aspect-ratio: 1 / 0.6;
+    display: flex;
+    gap: 6.25rem;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 1.9rem;
+}
+
+.grow--together .grow--image {
+    width: 50%;
+    aspect-ratio: 1 / 0.7;
+    background-image: url("./Images/illustration-grow-together.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.grow--together .text {
+    width: 400px;
+}
+
+.grow--together .text h2 {
+    margin-bottom: 1.25rem;
+}
+
+/* =============================================    FLOWING CONVERSATION    ============================================= */
+.flow {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.flowing--conversations {
+    width: var(--width);
+    aspect-ratio: 1 / 1.2;
+    display: flex;
+    gap: 6.25rem;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 1.9rem;
+}
+
+.flowing--conversations .flow--image {
+    width: 50%;
+    aspect-ratio: 1 / 0.7;
+    background-image: url("./Images/illustration-flowing-conversation.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.flowing--conversations .text {
+    width: 400px;
+}
+
+.flowing--conversations .text h2 {
+    margin-bottom: 1.25rem;
+}
+
+.bottom1 {
+    width: 100%;
+    aspect-ratio: 1 / 0.08;
+    background-image: url("./Images/bg-section-bottom-desktop-1.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 0;
+}
+
+.top2 {
+    width: 100%;
+    aspect-ratio: 1 / 0.08;
+    background-image: url("./Images/bg-section-top-desktop-2.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+/* =============================================    YOUR USERS    ============================================= */
+.users {
+    background-color: var(--pale-blue);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.your--users {
+    width: var(--width);
+    aspect-ratio: 1 / 0.6;
+    display: flex;
+    gap: 6.25rem;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 1.9rem;
+}
+
+.your--users .youruser--image {
+    width: 50%;
+    aspect-ratio: 1 / 0.7;
+    background-image: url("./Images/illustration-your-users.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.your--users .text {
+    width: 400px;
+}
+
+.your--users .text h2 {
+    margin-bottom: 1.25rem;
+}
+
+/* =============================================    BUILD COMMUNITY    ============================================= */
+article {
+    width: 100%;
+    aspect-ratio: 1 / 0.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+article .build {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.875rem;
+    margin: 0 1.9rem;
+}
+
+.bottom2 {
+    width: 100%;
+    aspect-ratio: 1 / 0.08;
+    background-image: url("./Images/bg-section-bottom-desktop-2.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 0;
+}
+
+.footer--top {
+    width: 100%;
+    aspect-ratio: 1 / 0.08;
+    background-image: url("./Images/bg-footer-top-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+/* =============================================    FOOTER    ============================================= */
+footer {
+    width: 100%;
+    color: var(--white);
+    background-color: var(--dark-cyan);
+    height: 35rem;
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    position: relative;
+}
+
+footer svg {
+    color: var(--white);
+}
+
+footer .footer {
+    width: var(--width);
+    display: flex;
+    justify-content: space-between;
+    margin: 0 1.9rem;
+}
+
+.right {
+    width: 350px;
+}
+
+.right .about {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-bottom: 70px;
+}
+
+.right .logo {
+    width: 15rem;
+    height: 2.43rem;
+}
+
+.right .phone,
+.right .email {
+    display: flex;
+    gap: 1rem;
+}
+
+.right .socials {
+    display: flex;
+    gap: 1.35rem;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.left h5 {
+    width: 21.75rem;
+}
+
+.left .subscribe {
+    display: flex;
+    gap: 10px;
+}
+
+.left input {
+    width: 310px;
+    height: 40px;
+    font-size: 15px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+.left button {
+    width: 120px;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 8px;
+    color: var(--white);
+    background-color: var(--pink);
+    cursor: pointer;
+    justify-self: end;
+}
+
+footer .rights {
+    font-size: 14px;
+    position: absolute;
+    bottom: 40px;
+}
+
+/* =============================================    MEDIA    ============================================= */
+@media only screen and (max-width: 1000px) {
+    footer {
+        width: 100%;
+        height: 60rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: unset;
+        position: relative;
+    }
+
+    footer .footer {
+        width: fit-content;
+        flex-direction: column-reverse;
+        gap: 150px;
+    }
+
+    .right .phone,
+    .right .email {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .right .about {
+        margin-bottom: 40px;
+    }
+
+    .left {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+
+    .left h5 {
+        width: 21.75rem;
+    }
+
+    .left .subscribe {
+        margin-top: 20px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .left input {
+        width: 100%;
+    }
+
+    .left button {
+        align-self: flex-end;
+    }
+
+    footer .rights {
+        font-size: 14px;
+        position: absolute;
+        bottom: 40px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    header .logo {
+        width: 10rem;
+        height: 2.2rem;
+    }
+
+    .top1 {
+        aspect-ratio: 1 / 0.2;
+        background-image: url("./Images/bg-section-top-mobile-1.svg");
+    }
+
+    .bottom1 {
+        aspect-ratio: 1 / 0.1;
+        background-image: url("./Images/bg-section-bottom-mobile-1.svg");
+    }
+
+    .top2 {
+        aspect-ratio: 1 / 0.1;
+        background-image: url("./Images/bg-section-top-mobile-2.svg");
+    }
+
+    .bottom2 {
+        aspect-ratio: 1 / 0.1;
+        background-image: url("./Images/bg-section-bottom-mobile-2.svg");
+    }
+
+    .footer--top {
+        aspect-ratio: 1 / 0.1;
+        background-image: url("./Images/bg-footer-top-mobile.svg");
+    }
+    /*  */
+    .grow--together {
+        aspect-ratio: 1 / 1.5;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .grow--together .grow--image {
+        width: 70%;
+    }
+
+    .grow--together .text {
+        width: 70%;
+        text-align: center;
+    }
+
+    /*  */
+    .flow {
+        aspect-ratio: 1 / 1.4;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .flowing--conversations {
+        aspect-ratio: 1 / 0.5;
+        flex-direction: column;
+        justify-content: unset;
+    }
+
+    .flowing--conversations .flow--image {
+        width: 70%;
+    }
+
+    .flowing--conversations .text {
+        text-align: center;
+        width: 80%;
+    }
+
+    /*  */
+    .your--users {
+        aspect-ratio: 1 / 1.4;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 0 1.9rem;
+    }
+
+    .your--users .youruser--image {
+        width: 70%;
+    }
+
+    .your--users .text {
+        width: 80%;
+        text-align: center;
+    }
+
+    /* =============================================    BUILD COMMUNITY    ============================================= */
+    article {
+        aspect-ratio: 1 / 1;
+    }
+
+    article .build {
+        text-align: center;
+        gap: 2.5rem;
+    }
+
+    .bottom2 {
+        width: 100%;
+        aspect-ratio: 1 / 0.08;
+        background-image: url("./Images/bg-section-bottom-desktop-2.svg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        position: absolute;
+        top: 0;
+    }
+
+    .footer--top {
+        width: 100%;
+        aspect-ratio: 1 / 0.08;
+        background-image: url("./Images/bg-footer-top-desktop.svg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 608px) {
+    .main .stats {
+        justify-content: center;
+    }
+}
