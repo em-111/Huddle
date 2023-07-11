@@ -3,7 +3,7 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: 0;
+    box-sizing: border-box;
 }
 
 :root {
@@ -22,11 +22,15 @@
     --poppins: "Poppins", sans-serif;
     --open-sans: "Open Sans", sans-serif;
 
-    --width: 87.5rem;
+    --width: 75rem;
 }
 
 body {
     font-family: var(--poppins);
+}
+
+#container {
+    width: 100%;
 }
 
 h1,
@@ -49,7 +53,7 @@ p {
 .free--start {
     width: 14.125rem;
     height: 3.12rem;
-    font-size: 0.9rem;
+    font-size: 1rem;
     border-radius: 1.25rem;
     border: none;
     outline: none;
@@ -58,548 +62,525 @@ p {
     cursor: pointer;
 }
 
-#container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 /* =============================================    HEADER    ============================================= */
 header {
-    width: 100%;
     display: flex;
     justify-content: center;
+    padding: 0 50px;
 }
 
 header nav {
     width: var(--width);
-    padding: 2.5rem 1.9rem;
     display: flex;
     justify-content: space-between;
+    padding: 40px 0;
 }
 
 header .logo {
-    width: 12.5rem;
-    height: 2.5rem;
+    width: 200px;
+    height: 40px;
     background-image: url("./Images/logo.svg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 
 header button {
-    padding: 0 1.5rem;
-    font-size: 0.9rem;
+    width: 130px;
     color: var(--pink);
-    background-color: transparent;
+    background-color: var(--white);
     border: 1px solid var(--pink);
     outline: none;
-    border-radius: 1.25rem;
+    border-radius: 25px;
     cursor: pointer;
 }
 
 /* =============================================    MAIN    ============================================= */
 main {
     width: 100%;
+    height: 1000px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    text-align: center;
     position: relative;
+    padding: 0 50px;
 }
 
-.main {
-    padding: 4.3rem 1.9rem 10.6rem 1.9rem;
-    text-align: center;
+main .main {
     height: fit-content;
     display: flex;
     flex-direction: column;
-    gap: 4.3rem;
     align-items: center;
-    position: relative;
+    gap: 70px;
+    padding-top: 120px;
 }
 
-.main .description {
-    max-width: 500px;
+main .description {
+    width: 450px;
 }
 
-.main .mockup--image {
-    width: 80%;
-    aspect-ratio: 1 / 0.5;
-    background-image: url("./Images/screen-mockups.svg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-}
-
-.main .stats {
-    width: 70%;
+main .stats {
     display: flex;
-    flex-wrap: wrap;
-    gap: 100px;
-    justify-content: space-between;
+    gap: 150px;
 }
 
-.main .stat--logo1,
-.main .stat--logo2 {
-    width: 1.8rem;
-    height: 1.8rem;
+main .stat--icon1,
+main .stat--icon2 {
+    width: 30px;
+    height: 30px;
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 
-.main .stat--logo1 {
+main .stat--icon1 {
     background-image: url("./Images/icon-communities.svg");
 }
 
-.main .stat--logo2 {
+main .stat--icon2 {
     background-image: url("./Images/icon-messages.svg");
 }
 
-.main .stats p {
-    font-size: clamp(3rem, 0.5rem + 4vw, 4.5rem);
+main .stats p {
+    font-size: 65px;
 }
 
-.main .stats h6 {
+main h6 {
     color: var(--light-cyan);
 }
 
-.top1 {
+main .main--bottom {
     width: 100%;
-    aspect-ratio: 1 / 0.08;
+    height: 200px;
     background-image: url("./Images/bg-section-top-desktop-1.svg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    position: absolute;
+    bottom: 0;
 }
 
 /* =============================================    GROW TOGETHER    ============================================= */
-.grow {
-    background-color: var(--pale-blue);
+.grow--together {
     width: 100%;
+    height: 550px;
+    background-color: var(--pale-blue);
     display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.grow--together .growTogether {
+    width: var(--width);
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+.grow--together .grow--text {
+    width: 500px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
     justify-content: center;
 }
 
-.grow--together {
-    width: var(--width);
-    aspect-ratio: 1 / 0.6;
-    display: flex;
-    gap: 6.25rem;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 1.9rem;
-}
-
 .grow--together .grow--image {
-    width: 50%;
-    aspect-ratio: 1 / 0.7;
+    width: 45%;
+    aspect-ratio: 1 / 0.5;
     background-image: url("./Images/illustration-grow-together.svg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 
-.grow--together .text {
-    width: 400px;
-}
-
-.grow--together .text h2 {
-    margin-bottom: 1.25rem;
-}
-
 /* =============================================    FLOWING CONVERSATION    ============================================= */
-.flow {
+.flowing--conversations {
     width: 100%;
+    height: 1050px;
     display: flex;
     justify-content: center;
+    align-items: center;
+    padding: 0 50px;
     position: relative;
 }
 
-.flowing--conversations {
+.flowing--conversations .flowingConversations {
     width: var(--width);
-    aspect-ratio: 1 / 1.2;
     display: flex;
-    gap: 6.25rem;
+    flex-direction: row-reverse;
     justify-content: space-between;
-    align-items: center;
-    margin: 0 1.9rem;
+    gap: 100px;
+}
+
+.flowing--conversations .flow--text {
+    width: 500px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .flowing--conversations .flow--image {
-    width: 50%;
-    aspect-ratio: 1 / 0.7;
+    width: 45%;
+    aspect-ratio: 1 / 0.5;
     background-image: url("./Images/illustration-flowing-conversation.svg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 
-.flowing--conversations .text {
-    width: 400px;
-}
-
-.flowing--conversations .text h2 {
-    margin-bottom: 1.25rem;
-}
-
-.bottom1 {
+.flowing--conversations .flowing--top {
     width: 100%;
-    aspect-ratio: 1 / 0.08;
+    height: 200px;
+    position: absolute;
+    top: 0;
     background-image: url("./Images/bg-section-bottom-desktop-1.svg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    position: absolute;
-    top: 0;
 }
 
-.top2 {
+.flowing--conversations .flowing--bottom {
     width: 100%;
-    aspect-ratio: 1 / 0.08;
+    height: 200px;
+    position: absolute;
+    bottom: 0;
     background-image: url("./Images/bg-section-top-desktop-2.svg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    position: absolute;
-    bottom: 0;
 }
 
-/* =============================================    YOUR USERS    ============================================= */
-.users {
-    background-color: var(--pale-blue);
+/* =============================================    YOUR USESRS    ============================================= */
+.your--users {
     width: 100%;
+    height: 550px;
+    background-color: var(--pale-blue);
     display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.your--users .yourUsers {
+    width: var(--width);
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+.your--users .yourUser--text {
+    width: 500px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
     justify-content: center;
 }
 
-.your--users {
-    width: var(--width);
-    aspect-ratio: 1 / 0.6;
-    display: flex;
-    gap: 6.25rem;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 1.9rem;
-}
-
-.your--users .youruser--image {
-    width: 50%;
-    aspect-ratio: 1 / 0.7;
+.your--users .yourUser--image {
+    width: 45%;
+    aspect-ratio: 1 / 0.5;
     background-image: url("./Images/illustration-your-users.svg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 
-.your--users .text {
-    width: 400px;
-}
-
-.your--users .text h2 {
-    margin-bottom: 1.25rem;
-}
-
-/* =============================================    BUILD COMMUNITY    ============================================= */
+/* =============================================    YOUR USESRS    ============================================= */
 article {
     width: 100%;
-    aspect-ratio: 1 / 0.6;
+    height: 850px;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     position: relative;
+    padding: 0 50px;
 }
 
-article .build {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.875rem;
-    margin: 0 1.9rem;
+article h2 {
+    margin-bottom: 40px;
 }
 
-.bottom2 {
+article .buildCommunity--top {
     width: 100%;
-    aspect-ratio: 1 / 0.08;
+    height: 200px;
+    position: absolute;
+    top: 0;
     background-image: url("./Images/bg-section-bottom-desktop-2.svg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    position: absolute;
-    top: 0;
 }
 
-.footer--top {
+article .buildCommunity--bottom {
     width: 100%;
-    aspect-ratio: 1 / 0.08;
+    height: 150px;
+    position: absolute;
+    bottom: 0;
     background-image: url("./Images/bg-footer-top-desktop.svg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    position: absolute;
-    bottom: 0;
 }
 
 /* =============================================    FOOTER    ============================================= */
 footer {
     width: 100%;
+    height: 800px;
     color: var(--white);
     background-color: var(--dark-cyan);
-    height: 35rem;
+    padding: 100px 50px 0 50px;
     display: flex;
     justify-content: center;
-    padding-top: 100px;
     position: relative;
-}
-
-footer svg {
-    color: var(--white);
 }
 
 footer .footer {
     width: var(--width);
     display: flex;
     justify-content: space-between;
-    margin: 0 1.9rem;
+    gap: 100px;
 }
 
-.right {
-    width: 350px;
-}
-
-.right .about {
+footer .left--about {
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 25px;
     margin-bottom: 70px;
 }
 
-.right .logo {
-    width: 15rem;
-    height: 2.43rem;
+footer .description {
+    width: 310px;
 }
 
-.right .phone,
-.right .email {
+footer .phone,
+footer .email {
     display: flex;
-    gap: 1rem;
+    gap: 15px;
 }
 
-.right .socials {
+footer .socials {
     display: flex;
-    gap: 1.35rem;
+    gap: 25px;
 }
 
-.left {
+footer .facebook,
+footer .instagram,
+footer .twitter {
+    width: 35px;
+    height: 35px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+footer .facebook {
+    background-image: url("./Images/facebook.svg");
+}
+
+footer .instagram {
+    background-image: url("./Images/instagram.svg");
+}
+
+footer .twitter {
+    background-image: url("./Images/twitter.svg");
+}
+
+footer .right {
+    height: fit-content;
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 25px;
 }
 
-.left h5 {
-    width: 21.75rem;
+footer .right p {
+    max-width: 360px;
+    min-width: 310px;
 }
 
-.left .subscribe {
-    display: flex;
-    gap: 10px;
-}
-
-.left input {
-    width: 310px;
-    height: 40px;
-    font-size: 15px;
-    border-radius: 8px;
+footer input {
+    width: 300px;
+    height: 45px;
     border: none;
     outline: none;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-right: 10px;
+    padding: 0 15px;
 }
 
-.left button {
-    width: 120px;
-    height: 40px;
-    font-size: 16px;
+footer button {
+    width: 140px;
+    height: 45px;
+    border: none;
+    outline: none;
     border-radius: 8px;
-    color: var(--white);
+    font-size: 15px;
+    color: #fff;
     background-color: var(--pink);
     cursor: pointer;
-    justify-self: end;
 }
 
 footer .rights {
-    font-size: 14px;
     position: absolute;
     bottom: 40px;
 }
 
-/* =============================================    MEDIA    ============================================= */
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1100px) {
+    /* =============================================    FOOTER    ============================================= */
     footer {
-        width: 100%;
-        height: 60rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-top: unset;
-        position: relative;
+        height: 1100px;
     }
 
     footer .footer {
-        width: fit-content;
         flex-direction: column-reverse;
+        align-items: center;
+        justify-content: unset;
+        height: fit-content;
+    }
+
+    footer .sub {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        gap: 15px;
+    }
+
+    footer button {
+        align-self: flex-end;
+    }
+}
+
+/* =============================================    MEDIA    ============================================= */
+@media only screen and (max-width: 950px) {
+    /* =============================================    HEADER    ============================================= */
+    header {
+        padding: 0 30px;
+    }
+
+    /* =============================================    MAIN    ============================================= */
+    main {
+        height: 1300px;
+    }
+
+    main .main--bottom {
+        height: 100px;
+    }
+
+    main .stats {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         gap: 150px;
     }
 
-    .right .phone,
-    .right .email {
-        display: flex;
-        gap: 1rem;
+    main .stat {
+        width: fit-content;
     }
 
-    .right .about {
-        margin-bottom: 40px;
-    }
-
-    .left {
-        display: flex;
-        flex-direction: column;
-        gap: 1.25rem;
-    }
-
-    .left h5 {
-        width: 21.75rem;
-    }
-
-    .left .subscribe {
-        margin-top: 20px;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .left input {
-        width: 100%;
-    }
-
-    .left button {
-        align-self: flex-end;
-    }
-
-    footer .rights {
-        font-size: 14px;
-        position: absolute;
-        bottom: 40px;
-    }
-}
-
-@media only screen and (max-width: 700px) {
-    header .logo {
-        width: 10rem;
-        height: 2.2rem;
-    }
-
-    .top1 {
-        aspect-ratio: 1 / 0.2;
-        background-image: url("./Images/bg-section-top-mobile-1.svg");
-    }
-
-    .bottom1 {
-        aspect-ratio: 1 / 0.1;
-        background-image: url("./Images/bg-section-bottom-mobile-1.svg");
-    }
-
-    .top2 {
-        aspect-ratio: 1 / 0.1;
-        background-image: url("./Images/bg-section-top-mobile-2.svg");
-    }
-
-    .bottom2 {
-        aspect-ratio: 1 / 0.1;
-        background-image: url("./Images/bg-section-bottom-mobile-2.svg");
-    }
-
-    .footer--top {
-        aspect-ratio: 1 / 0.1;
-        background-image: url("./Images/bg-footer-top-mobile.svg");
-    }
-    /*  */
+    /* =============================================    GROW TOGETHER    ============================================= */
     .grow--together {
-        aspect-ratio: 1 / 1.5;
-        flex-direction: column;
-        justify-content: space-evenly;
+        width: 100%;
+        height: 550px;
+        background-color: var(--pale-blue);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 30px;
+    }
+
+    .grow--together .growTogether {
+        width: unset;
+        max-width: 450px;
+        min-width: 200px;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+    }
+
+    .grow--together .grow--text {
+        width: 80%;
+        text-align: center;
     }
 
     .grow--together .grow--image {
-        width: 70%;
-    }
-
-    .grow--together .text {
-        width: 70%;
-        text-align: center;
-    }
-
-    /*  */
-    .flow {
-        aspect-ratio: 1 / 1.4;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .flowing--conversations {
-        aspect-ratio: 1 / 0.5;
-        flex-direction: column;
-        justify-content: unset;
-    }
-
-    .flowing--conversations .flow--image {
-        width: 70%;
-    }
-
-    .flowing--conversations .text {
-        text-align: center;
-        width: 80%;
-    }
-
-    /*  */
-    .your--users {
-        aspect-ratio: 1 / 1.4;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        margin: 0 1.9rem;
-    }
-
-    .your--users .youruser--image {
-        width: 70%;
-    }
-
-    .your--users .text {
-        width: 80%;
-        text-align: center;
-    }
-
-    /* =============================================    BUILD COMMUNITY    ============================================= */
-    article {
+        width: 300px;
         aspect-ratio: 1 / 1;
     }
 
-    article .build {
-        text-align: center;
-        gap: 2.5rem;
-    }
-
-    .bottom2 {
+    /* =============================================    FLOWING CONVERSATION    ============================================= */
+    .flowing--conversations {
         width: 100%;
-        aspect-ratio: 1 / 0.08;
-        background-image: url("./Images/bg-section-bottom-desktop-2.svg");
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-        position: absolute;
-        top: 0;
-    }
-
-    .footer--top {
-        width: 100%;
-        aspect-ratio: 1 / 0.08;
-        background-image: url("./Images/bg-footer-top-desktop.svg");
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-        position: absolute;
-        bottom: 0;
-    }
-}
-
-@media only screen and (max-width: 608px) {
-    .main .stats {
+        height: 1050px;
+        display: flex;
         justify-content: center;
+        align-items: center;
+        padding: 0 50px;
+        position: relative;
+    }
+
+    .flowing--conversations .flowingConversations {
+        width: unset;
+        max-width: 450px;
+        min-width: 200px;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+    }
+
+    .flowing--conversations .flow--text {
+        width: 80%;
+        text-align: center;
+    }
+
+    .flowing--conversations .flow--image {
+        width: 300px;
+        aspect-ratio: 1 / 1;
+    }
+
+    .flowing--conversations .flowing--top {
+        height: 100px;
+    }
+
+    .flowing--conversations .flowing--bottom {
+        height: 100px;
+    }
+
+    /* =============================================    YOUR USERS    ============================================= */
+    .your--users {
+        width: 100%;
+        height: 590px;
+        background-color: var(--pale-blue);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 30px;
+    }
+
+    .your--users .yourUsers {
+        width: unset;
+        max-width: 450px;
+        min-width: 200px;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+    }
+
+    .your--users .yourUser--text {
+        width: 80%;
+        text-align: center;
+    }
+
+    .your--users .yourUser--image {
+        width: 300px;
+        aspect-ratio: 1 / 1;
+    }
+
+    /* =============================================    YOUR USESRS    ============================================= */
+    article {
+        height: 650px;
+    }
+
+    article .buildCommunity--top {
+        height: 100px;
+    }
+
+    article .buildCommunity--bottom {
+        height: 70px;
     }
 }
