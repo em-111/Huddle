@@ -115,7 +115,8 @@ main .main {
 }
 
 main .description {
-    width: 450px;
+    max-width: 450px;
+    min-width: 200px;
 }
 
 main .stats {
@@ -447,12 +448,17 @@ footer .rights {
 @media only screen and (max-width: 950px) {
     /* =============================================    HEADER    ============================================= */
     header {
-        padding: 0 30px;
+        padding: 0 15px;
+    }
+
+    header .logo {
+        width: 150px;
+        height: 30px;
     }
 
     /* =============================================    MAIN    ============================================= */
     main {
-        height: 1300px;
+        height: 1200px;
     }
 
     main .main--bottom {
@@ -463,7 +469,7 @@ footer .rights {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 150px;
+        gap: 70px;
     }
 
     main .stat {
