@@ -423,6 +423,7 @@ footer .rights {
     /* =============================================    FOOTER    ============================================= */
     footer {
         height: 1100px;
+        padding: 0 20px;
     }
 
     footer .footer {
@@ -459,6 +460,7 @@ footer .rights {
     /* =============================================    MAIN    ============================================= */
     main {
         height: 1200px;
+        padding: 0 20px;
     }
 
     main .main--bottom {
@@ -484,7 +486,7 @@ footer .rights {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 0 30px;
+        padding: 0 20px;
     }
 
     .grow--together .growTogether {
@@ -514,7 +516,7 @@ footer .rights {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 0 50px;
+        padding: 0 20px;
         position: relative;
     }
 
@@ -554,7 +556,7 @@ footer .rights {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 0 30px;
+        padding: 0 20px;
     }
 
     .your--users .yourUsers {
@@ -580,6 +582,7 @@ footer .rights {
     /* =============================================    YOUR USESRS    ============================================= */
     article {
         height: 650px;
+        padding: 0 20px;
     }
 
     article .buildCommunity--top {
